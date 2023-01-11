@@ -17,12 +17,16 @@ const sum = function([...numbers]) {
   return sum;
 };
 
-const multiply = function() {
-
+const multiply = function([...numbers]) {
+  let product = 1;
+  for (let number of numbers) {
+    product *= number;
+  };
+  return product;
 
 };
 
-const power = function() {
+const power = function(number, power) {
 	
 };
 
