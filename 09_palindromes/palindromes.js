@@ -1,14 +1,7 @@
 const palindromes = function (string) {
     let stringArray = string.split('');
     let lettersArray = stringArray.filter(
-        letter => {
-            if (letter.includes(' ') || letter.includes(',') || letter.includes('.') || letter.includes('!')) {
-                return false
-            } else {
-                return true;
-            }
-        }
-    )
+        letter => !(letter.includes(' ') || letter.includes(',') || letter.includes('.') || letter.includes('!')))
     let stringLetters = (lettersArray.join('')).toLowerCase();
 
     let backwardLettersArray = lettersArray.reverse();
